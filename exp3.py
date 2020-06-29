@@ -8,6 +8,7 @@ import gc
 
 
 ### Iteratively add cols to DF with square brackets notion, Trigger gc after each loop iteration
+print("Starting experiment 3")
 
 gc.disable()
 memory_snapshots = []

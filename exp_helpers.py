@@ -2,6 +2,11 @@ from matplotlib import pyplot as plt
 
 
 def make_double_plot(snapshots):
+    """Helper: generate 2 summary plots.
+
+    :param snapshots:
+    :return:
+    """
     plt.figure(figsize=(20, 10))
     plt.suptitle("Summary statistics")
 
@@ -21,6 +26,11 @@ def make_double_plot(snapshots):
 
 
 def make_single_plot(snapshots):
+    """Helper: generate single summary plot
+
+    :param snapshots:
+    :return:
+    """
     fig, ax1 = plt.subplots(figsize=(20, 10))
     plt.title("Summary stats")
 

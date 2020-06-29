@@ -7,6 +7,7 @@ from datetime import datetime
 
 
 # Append cols to dict object, concatenate to DF once after loop execution.
+print("Starting experiment 2")
 
 memory_snapshots = []
 process = psutil.Process(os.getpid())

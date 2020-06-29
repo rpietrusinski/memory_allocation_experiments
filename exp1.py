@@ -7,6 +7,7 @@ from datetime import datetime
 
 
 ### Iteratively add cols to DF with square brackets notion
+print("Starting experiment 1")
 
 memory_snapshots = []
 process = psutil.Process(os.getpid())
