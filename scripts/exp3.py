@@ -15,7 +15,11 @@ print("Starting experiment 3")
 @click.option('--n_iter', type=int, help='Number of iterations')
 @click.option('--n_rows', type=int, help='Number of rows in a DF')
 @click.option('--results_dir', type=str, help='Output dir')
-def main(n_iter, n_rows, results_dir):
+@click.option('--exp_name', type=str, default="exp3", help='Experiment name')
+def main(n_iter,
+         n_rows,
+         results_dir,
+         exp_name):
     gc.disable()
     memory_snapshots = []
     process = psutil.Process(os.getpid())
@@ -46,7 +50,8 @@ def main(n_iter, n_rows, results_dir):
     )
     memory_snapshots_df['duration'] = memory_snapshots_df['time'] - memory_snapshots_df['time'].shift(1)
     memory_snapshots_df['duration'] = memory_snapshots_df['duration'].apply(lambda x: x.microseconds + x.seconds * 1e6)
-    memory_snapshots_df.to_csv(f"{results_dir}/exp3.csv", index=False)
+    results_path = os.path.join(os.getcwd(), results_dir, f"{exp_name}.csv")
+    memory_snapshots_df.to_csv(results_path, index=False)
     print("Done")
 
 
