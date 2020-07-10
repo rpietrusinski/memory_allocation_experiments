@@ -1,5 +1,5 @@
-n_iter=40
-n_rows=1000
+n_iter=4000
+n_rows=100000
 csv_dir=experiment_output
 plots_dir=plots
 scripts_path=scripts
