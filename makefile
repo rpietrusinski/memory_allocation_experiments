@@ -11,6 +11,7 @@ experiments:
 	@python ${scripts_path}/exp1.py --n_iter ${n_iter} --n_rows ${n_rows} --results_dir ${csv_dir}
 	@python ${scripts_path}/exp2.py --n_iter ${n_iter} --n_rows ${n_rows} --results_dir ${csv_dir}
 	@python ${scripts_path}/exp3.py --n_iter ${n_iter} --n_rows ${n_rows} --results_dir ${csv_dir}
+	@python ${scripts_path}/exp4.py --n_iter ${n_iter} --n_rows ${n_rows} --results_dir ${csv_dir}
 	@echo 'Finished experiments'
 
 analysis:
